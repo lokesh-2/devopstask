@@ -1,5 +1,5 @@
 # devopstask
-## mywork
+## myblog
 ### Task about integration of jenkins with GitHub.
 
 **IN GitHub**

@@ -36,8 +36,14 @@
   ```
   ```javascript
   sudo cp -v -r -f /lwweb
+
+  if sudo docker ps|grep testmyos web
+  then
+  echo "already running"
+  else 
+  sudo docker run -d -t -i -p 8082:80 -v /lwweb:/usr/localapache/htdocs/--name testmyos1 httpd
+  fi
   ```
-  
     
   * job2 created to keep on checking the main branch.
     * this job send the data to main production team. 
@@ -52,11 +58,11 @@
   
   **in the job2 execute shell**
   ```javascript
-  if sudo docker ps|grep myos web
+  if sudo docker ps|grep runmyos web
   then
   echo "already running"
   else 
-  sudo docker run -d -t -i -p 8082:80 -v /lwweb:/usr/localapache/htdocs/--name myos1 httpd
+  sudo docker run -d -t -i -p 8082:80 -v /lwweb:/usr/localapache/htdocs/--name runmyos1 httpd
   fi
   ```
   

@@ -37,7 +37,7 @@
   ```javascript
   sudo cp -v -r -f /lwweb
 
-  if sudo docker ps|grep testmyos web
+  if sudo docker ps|grep testmyos
   then
   echo "already running"
   else 
@@ -58,7 +58,7 @@
   
   **in the job2 execute shell**
   ```javascript
-  if sudo docker ps|grep runmyos web
+  if sudo docker ps|grep runmyos
   then
   echo "already running"
   else 
